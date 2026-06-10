@@ -48,7 +48,7 @@ typedef std::pair<ros::Time, XsDataPacket> RosXsDataPacket;
 class XdaCallback : public XsCallback
 {
 public:
-	XdaCallback(size_t maxBufferSize = 5);
+	XdaCallback(size_t maxBufferSize = 32);
 	virtual ~XdaCallback() throw();
 
 	RosXsDataPacket next(const std::chrono::milliseconds &timeout);
